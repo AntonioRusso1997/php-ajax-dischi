@@ -3,3 +3,60 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-color: #1d2d3c;
+}
+
+
+header {
+    background-color: #2e3a46;
+    height: 70px;
+    padding: 10px 20px;
+}
+
+header>img {
+    height: 100%;    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 70px;
+    height: 100%;
+}
+
+.card {
+    background-color: #2e3a46;
+    width: calc((100% / 7) - 30px);
+    margin: 10px 15px;
+    min-height: 370px;
+    text-align: center;
+    padding: 20px;
+    cursor:pointer;
+}
+
+.card>img {
+    width: 100%;
+}
+
+.album-title {
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.album-author, 
+.album-year {
+    color: gray;
+}
+
+.album-author {
+    font-weight: 500;
+}
