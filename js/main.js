@@ -8,7 +8,8 @@ const app = new Vue(
         },
         created() {
             axios
-                .get('http://localhost/esercizi/php-ajax-dischi/api/server.php')
+                // .get('http://localhost/esercizi/php-ajax-dischi/api/server.php')
+                .get('api/server.php')
                 .then((response) =>{
                     this.songs = response.data;
                 })
