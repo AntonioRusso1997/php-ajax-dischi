@@ -20,10 +20,27 @@
         
         <header>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png" alt="Spotify Logo">
+            <select @change="filterGenre" v-model="selected" class="genre" name="genre" id="genre">
+                    <option value="All">
+                        Tutti i generi
+                    </option>
+                    <option value="Jazz">
+                        Jazz
+                    </option>
+                    <option value="Metal">
+                        Metal
+                    </option>
+                    <option value="Pop">
+                        Pop
+                    </option>
+                    <option value="Rock">
+                        Rock
+                    </option>
+            </select>
         </header>
         <main>
             <div class="container">
-                <div v-for="song in songs" class="card">
+                <div v-for="song in filteredList" class="card">
                 <img :src="song.poster" :alt="song.title">
                 <h2 class="album-title">{{song.title}}</h2>
                 <h3 class="album-author">{{song.author}}</h3>
